@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 95vh;
+  background-color: black;
+  color: white;
+}
+ul {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+ul li {
+  background-color: white;
+  list-style: none;
+  position: relative;
+  height: 40px;
+  width: 150px;
+  font-size: 25px;
+  padding: 5px;
+  color: black;
+  transition: 0.8s;
+}
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+ul li:hover {
+  background-color: rgb(172, 172, 172);
+  color: rgb(12, 12, 12);
+  font-size: 23px;
+  transition: 0.8s;
+}
+.author {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}

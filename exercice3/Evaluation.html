@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <script src="Controle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="GenererCaptcha()" >
+    <form action="" method="post" onsubmit="return false">
+        <h1>Evaluation d'un hotel</h1>
+        <div>
+            <label for="hotel">Hôtel:</label>
+            <select name="hotel" id="hotel">
+                <option>Choisir un hôtel</option>
+                <option>5 Stars</option>
+                <option>Globe</option>
+                <option>The sun</option>
+            </select>
+        </div>
+        <table border="1">
+            <tr>
+                <th>Accueil: </th>
+                <td>
+                    <label ><input type="radio" name="accueil" value="3" >Tres satisfaisant</label>
+                    <label ><input type="radio" name="accueil" value="2" >satisfaisant</label>
+                    <label ><input type="radio" name="accueil" value="1" >Pas satisfaisant</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Restauration: </th>
+                <td>
+                    <label ><input type="radio" name="restauration" value="3" >Tres satisfaisant</label>
+                    <label ><input type="radio" name="restauration" value="2" >satisfaisant</label>
+                    <label ><input type="radio" name="restauration" value="1" >Pas satisfaisant</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Extra: </th>
+                <td style="display: flex;flex-direction: column;">
+                    <label ><input type="checkbox" name="extra" value="4" >Picine couverte</label>
+                    <label ><input type="checkbox" name="extra" value="2" >Plage privee</label>
+                    <label ><input type="checkbox" name="extra" value="1" >Couverture wifi</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div align='right'>
+                        <label for="captcha"><b>captcha:</b></label>
+                        <input type="text" readonly name="captcha" id="captcha">
+                        <button onclick="GenererCaptcha()" >Actualiser</button>
+                    </div>
+                    <p>Combien de lettres majuscules dans la zone Captcha?</p>
+                    <div align='right'>
+                        <label for="rcaptcha"><b>reponse:</b></label>
+                        <input type="text" name="rcaptcha" id="rcaptcha">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <button type="reset" onclick="GenererCaptcha()">Annuler</button>
+        <button type="submit" onclick="verif()">Valider</button>
+    </form>
+</body>
+</html>

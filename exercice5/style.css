@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+table {
+  width: 70%;
+}
+
+label {
+  color: white;
+  font-size: 20px;
+}
+
+#operation {
+  display: inline-block;
+  width: 140px;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 3px;
+  margin: 10px;
+  background-color: rgb(255, 255, 59);
+  color: black;
+}
+button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background: transparent;
+}
+button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+@media all and (max-width: 30em) {
+   button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}

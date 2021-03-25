@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajout</title>
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="GenererCaptcha()">
+    <form  onsubmit="return false" action="#" method="post" style="display: inline-flex;flex-direction: column;">
+        <h1>Ajouter un abonné</h1>
+
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom">
+
+        <label for="prenom">prenom</label>
+        <input type="text" name="prenom" id="prenom">
+
+        <label for="login">login</label>
+        <input type="text" name="login" id="login">
+
+        <label for="mdp">Mot de passe</label>
+        <input type="password" name="mdp" id="mdp">
+
+        <label for="imei">N°imei</label>
+        <input type="text" name="imei" id="imei">
+
+        <label for="sim">N°carte sim</label>
+        <input type="text" name="sim" id="sim">
+        
+        <div>
+            <label >type vehicule</label>
+            <label ><input type="radio" name="vehicule" id="voiture">Voiture</label>
+            <label ><input type="radio" name="vehicule" id="camion">camion</label>
+            <label ><input type="radio" name="vehicule" id="moto">moto</label>
+        </div>
+        
+        <label for="compteur">compteur</label>
+        <input type="text" name="compteur" id="compteur">
+        
+        <div>
+            <label >Duree d'abonnement</label>
+            <label ><input type="radio" name="abonnement" id="3">3 mois</label>
+            <label ><input type="radio" name="abonnement" id="6">6 mois </label>
+            <label ><input type="radio" name="abonnement" id="12">1 ans</label>
+        </div>
+        <label>captcha <span id="captcha"></span><button onclick="GenererCaptcha()" >Actualiser</button></label>
+        <label>Reponse <input type="text" name="reponse" id="reponse"></label>
+        <div>
+
+            <button type="submit" onclick="verif()">Ajouter</button>      
+            <button type="reset">Annuler</button>
+        </div>
+        </form>
+</body>
+</html>

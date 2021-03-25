@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice2</title>
+    <script src="app2.js"></script>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #col{
+            background-color: rgb(127, 127, 127);
+            height: 50px;
+            width: 100%;
+        }
+        .l{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body onload="bgc()">
+    <div>
+    <div style="display: flex;">
+        <div class="l">
+            <label style="color: red;" >Rouge</label>
+            <input type="range" name="r" id="r" min="0" max="255" value="127" oninput="change()">
+            <label style="color: red;" id="rl">127</label>
+        </div>
+        <div class="l">
+            <label style="color: green;" >Vert</label>
+            <input type="range" name="g" id="g" min="0" max="255" value="127" oninput="change()">
+            <label style="color: green;" id="gl">127</label>
+        </div>
+        <div class="l">
+            <label style="color: blue;" >Bleu</label>
+            <input type="range" name="b" id="b" min="0" max="255" value="127" oninput="change()">
+            <label style="color: blue;" id="bl">127</label>
+        </div>
+    </div>
+    <div id="col"></div>
+    <center><button onclick="rand()">choisir une couleur au hasard</button></center>
+</div>
+</body>
+</html>
